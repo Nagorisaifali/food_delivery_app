@@ -10,6 +10,7 @@ const Card = ({name , image , id , price , type}) => {
     
     let dispatch = useDispatch() ; 
 
+
   return (
     <>
         <div className='w-[300px] h-[400px] bg-white p-3 rounded-lg flex flex-col gap-3 shadow-lg hover:border-2 border-green-300  '>
@@ -24,7 +25,10 @@ const Card = ({name , image , id , price , type}) => {
                 <div className='flex justify-center items-center gap-2 text-green-500 text-lg font-bold'>{type === 'veg' ? <LuLeafyGreen /> : <GiChickenOven /> }<span>{type}</span></div>
             </div>
             <button className='w-full p-3 bg-green-500 rounded-lg text-white hover:bg-green-400 transition-all '  onClick={() => {dispatch(AddItem({id:id , name : name , price : price , image :image ,qty :1 })) ; toast.success("Item Added")  }  }>Add to dish</button>
+            
         </div>
+
+
     </>
   )
 }

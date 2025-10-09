@@ -76,6 +76,7 @@ const Home = () => {
           ))}
         </div>
 
+
           <div className='w-[full] border-t-2 border-b-2 border-gray-400 mt-7  flex flex-col gap-2 p-8 '>
               <div className='w-full flex justify-between items-center '>
                 <span className='text-lg text-gray-600 font-semibold'>Subtotal</span>

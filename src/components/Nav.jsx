@@ -11,10 +11,10 @@ const Nav = () => {
   let {input , setInput , cate , setCate , showCart , setShowCart} = useContext(dataContext)
 
     useEffect(()=>{
-      let newList =  food_items.filter((item)=> item.food_name.includes(input) || item.food_name.toLowerCase().includes(input))
+      let newList =  food_items.filter((item)=> item.food_name.includes(input) || item.food_name.toLowerCase().includes(input)) 
       setCate(newList)
     },[input])
-
+    
      let items = useSelector(state=>state.cart) 
     console.log(items) ; 
 
@@ -27,6 +27,8 @@ const Nav = () => {
             <FaSearch  className='text-green-500  w-[20px] h-[20px] '/>
             <input className='w-[100%]  outline-none text-[16px] md:text-[20px]' type="text" placeholder='Search Items.......' onChange={(e)=> setInput(e.target.value)} value={input}/>
       </form>
+
+
       <div className='w-[60px] h-[60px] cursor-pointer bg-white flex justify-center items-center rounded-md shadow-xl relative'  onClick={() => {
         setShowCart(true)
       }}>

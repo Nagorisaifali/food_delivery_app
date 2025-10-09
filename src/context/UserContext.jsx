@@ -9,7 +9,7 @@ const UserContext = ({children}) => {
 
     let [input , setInput] = useState("") ; 
     let [cate , setCate] = useState(food_items) 
-    let [showCart , setShowCart] = useState(false)
+    let [showCart , setShowCart] = useState(false) ; 
     
     let data={
         input , 
