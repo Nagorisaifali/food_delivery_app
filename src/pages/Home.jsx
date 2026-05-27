@@ -8,7 +8,7 @@ import { RxCross2 } from "react-icons/rx";
 import Card2 from '../components/Card2.jsx'
 import { useSelector } from 'react-redux'
 import { toast } from 'react-toastify'
-
+import { motion } from 'framer-motion'
 
 const Home = () => {
 
@@ -34,6 +34,21 @@ const Home = () => {
   return (
     <div className='bg-slate-200 w-full min-h-[100vh]'>
       <Nav/>
+
+
+
+        <div className='w-full min-h-[80vh] flex flex-col-reverse lg:flex-row items-center justify-between px-5 md:px-10 lg:px-20 py-10 gap-10'> {/* LEFT SIDE */} 
+          <motion.div initial={{ opacity: 0, x: -80 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7 }} className='w-full lg:w-[50%]' >
+             <h1 className='text-4xl md:text-6xl font-bold leading-tight text-gray-800'> Delicious Food <span className='text-green-500'> Delivered </span> To Your Door </h1>
+              <p className='mt-6 text-lg text-gray-600 leading-8'> Order your favorite food online with fast delivery and amazing offers. </p> 
+              <div className='mt-8 flex flex-wrap gap-5'> <button className='bg-green-500 text-white px-8 py-4 rounded-full shadow-lg hover:bg-green-600 hover:scale-105 transition-all duration-300'> Order Now </button> <button className='border-2 border-green-500 text-green-500 px-8 py-4 rounded-full hover:bg-green-500 hover:text-white transition-all duration-300'> Explore Menu </button> </div> 
+              </motion.div> {/* RIGHT SIDE */} <motion.div initial={{ opacity: 0, x: 80 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7 }} className='w-full lg:w-[50%] flex justify-center' > 
+                <img src='https://cdn-icons-png.flaticon.com/512/5787/5787016.png' alt='food' className='w-[280px] md:w-[420px] animate-bounce' /> </motion.div> </div>
+
+
+
+    {/* ////////////////// */}
+
 
       {!input ?  
       <div className='flex flex-wrap justify-center items-center gap-5 w-[100%] '>
